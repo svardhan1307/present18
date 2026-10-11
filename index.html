@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Happy Birthday Shipra! 🎂 ♡ Besties Forever</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Confetti and Particle Overlay Canvas -->
+  <canvas id="confettiCanvas"></canvas>
+
+  <!-- Ambient Dreamy Clouds in Background -->
+  <div class="bg-clouds">
+    <div class="cloud-item cloud-1"></div>
+    <div class="cloud-item cloud-2"></div>
+    <div class="cloud-item cloud-3"></div>
+  </div>
+
+  <!-- Main Application Wrapper -->
+  <div class="app-container">
+
+    <!-- Top Navigation Bar -->
+    <header class="top-nav">
+      <div class="brand-badge">
+        <span>🎀</span>
+        <span class="brand-text">Shipra's Birthday Special</span>
+        <span>✨</span>
+      </div>
+
+      <div class="nav-actions">
+        <button id="musicToggleBtn" class="icon-btn" title="Toggle Sweet Birthday Music">
+          <span id="musicIcon">🎵</span>
+          <span id="musicText">Music Box</span>
+          <div class="music-waves" id="musicWaves" style="display: none;">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+      </div>
+    </header>
+
+    <!-- Progress Indicator Bar -->
+    <div class="progress-bar-container">
+      <div class="progress-info">
+        <span>Little Chapters of Love ♡</span>
+        <span id="progressText">1 of 5</span>
+      </div>
+      <div class="progress-track">
+        <div id="progressFill" class="progress-fill" style="width: 20%;"></div>
+      </div>
+      <div class="dots-container" id="dotsContainer">
+        <div class="dot-indicator active" data-slide="1"></div>
+        <div class="dot-indicator" data-slide="2"></div>
+        <div class="dot-indicator" data-slide="3"></div>
+        <div class="dot-indicator" data-slide="4"></div>
+        <div class="dot-indicator" data-slide="5"></div>
+      </div>
+    </div>
+
+    <!-- Slides Viewport -->
+    <main class="slides-viewport">
+
+      <!-- ================= SLIDE 1: A BIRTHDAY SURPRISE ================= -->
+      <section class="slide active" id="slide-1" data-index="1">
+        <div class="card-wrapper">
+          <div class="top-bow-clip">🎀</div>
+          
+          <div class="sparkle-tag">
+            <span>✨</span>
+            <span>Special Delivery for My Bestie</span>
+            <span>✨</span>
+          </div>
+
+          <h1 class="slide-title">Happy Birthday, Shipra! 🎂</h1>
+          <p class="slide-subtitle">To my favourite human and the sweetest best friend ever ♡</p>
+
+          <div class="panda-hero-container" id="pandaContainer1">
+            <!-- Injected by pandas.js -->
+          </div>
+
+          <button class="btn-primary" id="openSurpriseBtn">
+            <span>Open Your Surprise 🎁</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ================= SLIDE 2: OUR FRIENDSHIP ================= -->
+      <section class="slide" id="slide-2" data-index="2">
+        <div class="card-wrapper">
+          <div class="top-bow-clip">🌸</div>
+
+          <h2 class="slide-title">A Little World of Us ♡</h2>
+          
+          <div class="panda-hero-container" id="pandaContainer2" style="width: 250px; height: 180px;">
+            <!-- Injected by pandas.js -->
+          </div>
+
+          <p class="friendship-message">
+            “Some people make life brighter just by being in it, and you're one of those people, Shipra. Thank you for all the laughter, the silly moments, the endless talks, and the memories that make ordinary days special. Life feels a little more beautiful with a best friend like you.”
+          </p>
+
+          <div class="friendship-cards-grid">
+            <!-- Card 1 -->
+            <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="card-icon-badge">🐼</div>
+                  <div class="card-title">My Partner in Crime 🐼</div>
+                  <span class="card-hint">Tap to flip ↺</span>
+                </div>
+                <div class="flip-card-back">
+                  <p class="card-note">“From spontaneous crazy plans to laughing until our stomachs hurt. Life with you is never boring!”</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="card-icon-badge">🎀</div>
+                  <div class="card-title">My Forever Gossip Buddy 🎀</div>
+                  <span class="card-hint">Tap to flip ↺</span>
+                </div>
+                <div class="flip-card-back">
+                  <p class="card-note">“Hours feel like minutes when we talk. Thank you for listening to my 10-minute voice notes with zero judgment!”</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="card-icon-badge">♡</div>
+                  <div class="card-title">My Favourite Person ♡</div>
+                  <span class="card-hint">Tap to flip ↺</span>
+                </div>
+                <div class="flip-card-back">
+                  <p class="card-note">“You bring so much warmth, kindness, and magic into my life. I'm endlessly grateful for you, bestie!”</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SLIDE 3: AN OPEN LETTER ================= -->
+      <section class="slide" id="slide-3" data-index="3">
+        <div class="card-wrapper">
+          <div class="top-bow-clip">💌</div>
+
+          <h2 class="slide-title">A Little Letter From My Heart 💌</h2>
+
+          <div class="panda-hero-container" id="pandaContainer3" style="width: 170px; height: 160px;">
+            <!-- Injected by pandas.js -->
+          </div>
+
+          <div class="letter-section">
+            <div class="envelope-wrapper">
+              <div class="envelope-box">
+                <div class="letter-stamp">
+                  <span>BESTIE</span>
+                  <span style="font-size: 14px;">💌</span>
+                  <span>LOVE</span>
+                </div>
+
+                <div class="letter-greeting">Dear Shipra,</div>
+
+                <p class="letter-paragraph">
+                  Happy Birthday to the person who makes my world a little happier just by being herself. I hope you always remember how special you are and how much happiness you bring to the people around you.
+                </p>
+
+                <p class="letter-paragraph">
+                  Thank you for being my best friend, for sharing laughs with me, for understanding my craziness, and for making even the simplest moments unforgettable.
+                </p>
+
+                <p class="letter-paragraph">
+                  I wish you a life full of happiness, love, success, beautiful surprises, and dreams that come true. May this new chapter bring you a thousand reasons to smile.
+                </p>
+
+                <p class="letter-paragraph">
+                  No matter how much life changes, I hope we always keep making silly memories, laughing at random things, and being there for each other.
+                </p>
+
+                <p class="letter-paragraph">
+                  You deserve all the beautiful things this world has to offer.
+                </p>
+
+                <p class="letter-paragraph" style="font-weight: 700; color: #D81B60;">
+                  Happy Birthday once again, Shipra! Love you, bestie! 💗
+                </p>
+
+                <div class="letter-signoff">Forever your friend ♡</div>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn-primary" id="letterNextBtn" style="margin-top: 22px;">
+            <span>Aww, one more surprise! 💗</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ================= SLIDE 4: BIRTHDAY WISHES ================= -->
+      <section class="slide" id="slide-4" data-index="4">
+        <div class="card-wrapper">
+          <div class="top-bow-clip">🌟</div>
+
+          <h2 class="slide-title">Things I Wish for You ✨</h2>
+
+          <div class="panda-hero-container" id="pandaContainer4" style="width: 180px; height: 170px;">
+            <!-- Injected by pandas.js -->
+          </div>
+
+          <div class="wishes-container">
+            <div class="wish-item-card">
+              <div class="wish-badge">🌸</div>
+              <div class="wish-text-wrap">
+                <div class="wish-content-title">1. Happiness</div>
+                <div class="wish-content-quote">“May your smile always have a reason.”</div>
+              </div>
+            </div>
+
+            <div class="wish-item-card">
+              <div class="wish-badge">🌟</div>
+              <div class="wish-text-wrap">
+                <div class="wish-content-title">2. Success</div>
+                <div class="wish-content-quote">“May every dream you chase bring you closer to your goals.”</div>
+              </div>
+            </div>
+
+            <div class="wish-item-card">
+              <div class="wish-badge">💖</div>
+              <div class="wish-text-wrap">
+                <div class="wish-content-title">3. Love</div>
+                <div class="wish-content-quote">“May you always be surrounded by genuine love.”</div>
+              </div>
+            </div>
+
+            <div class="wish-item-card">
+              <div class="wish-badge">🗺️</div>
+              <div class="wish-text-wrap">
+                <div class="wish-content-title">4. Adventure</div>
+                <div class="wish-content-quote">“May life give you countless beautiful memories.”</div>
+              </div>
+            </div>
+
+            <div class="wish-item-card">
+              <div class="wish-badge">🐼</div>
+              <div class="wish-text-wrap">
+                <div class="wish-content-title">5. Friendship</div>
+                <div class="wish-content-quote">“May our friendship keep growing through every chapter of life.”</div>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn-primary" id="makeWishBtn">
+            <span>Make a Birthday Wish 🌟</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ================= SLIDE 5: THE FINAL GIFT ================= -->
+      <section class="slide" id="slide-5" data-index="5">
+        <div class="card-wrapper">
+          <div class="top-bow-clip">🐼</div>
+
+          <h2 class="slide-title">One Last Thing, Birthday Girl ♡</h2>
+
+          <div class="panda-hero-container" id="pandaContainer5" style="width: 220px; height: 210px;">
+            <!-- Injected by pandas.js -->
+          </div>
+
+          <p class="final-gift-text">
+            “Shipra, you are one of those people who make friendship feel like a little piece of magic. I hope this birthday reminds you of how loved, appreciated, and amazing you are.<br><br>
+            Here’s to more memories, more laughter, more adventures, and a friendship that stays special for years to come.”
+          </p>
+
+          <p class="highlight-bestie" style="margin-bottom: 24px;">
+            Happy Birthday, my bestie! 🩷🐼
+          </p>
+
+          <button class="btn-primary" id="sendHugBtn">
+            <span>Send You a Big Hug 🫂</span>
+          </button>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Bottom Navigation Controls -->
+    <footer class="bottom-controls">
+      <button id="prevBtn" class="nav-arrow-btn" disabled>
+        <span>←</span>
+        <span>Previous</span>
+      </button>
+
+      <div class="slide-counter-badge" id="slideCounterBadge">
+        Slide 1 of 5
+      </div>
+
+      <button id="nextBtn" class="nav-arrow-btn">
+        <span>Next</span>
+        <span>→</span>
+      </button>
+    </footer>
+
+  </div>
+
+  <!-- ================= MODALS ================= -->
+
+  <!-- Modal 1: Birthday Wish Reveal -->
+  <div class="modal-overlay" id="wishModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="closeWishModalBtn">✕</button>
+      <div style="font-size: 48px; margin-bottom: 8px;">✨🌟✨</div>
+      <h3 class="modal-title">Wish Made Upon a Star! 🌟</h3>
+      <p class="modal-message" style="font-size: 19px; color: #D81B60; font-weight: 700;">
+        “The universe better be extra kind to you this year, Shipra! 💕”
+      </p>
+      <div class="modal-warning-box">
+        All your sweet wishes are officially locked in and blessed by the stars! ✨
+      </div>
+      <button class="btn-primary" id="continueWishModalBtn">
+        <span>Aww, Thank You! 💗</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal 2: Virtual Panda Hug Reveal -->
+  <div class="modal-overlay" id="hugModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="closeHugModalBtn">✕</button>
+      
+      <div class="modal-panda-container" id="modalHugPandaContainer">
+        <!-- Injected by pandas.js -->
+      </div>
+
+      <h3 class="modal-title">Giant Hug Incoming! 🫂</h3>
+
+      <p class="modal-message" style="font-size: 18px; color: #D81B60; font-weight: 700; margin-bottom: 14px;">
+        Virtual panda hug delivered! 🐼💗
+      </p>
+
+      <div class="modal-warning-box">
+        ⚠️ <strong>Warning:</strong> This friendship comes with unlimited laughter and lifetime bestie membership!
+      </div>
+
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <button class="btn-primary" id="replaySurpriseBtn">
+          <span>Replay the Surprise ↺</span>
+        </button>
+        <button class="icon-btn" id="finishHugBtn" style="padding: 12px 20px;">
+          <span>Squeeze Tighter 🫂</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Interactive Bundle (Supports both direct double-click & HTTP server) -->
+  <script src="js/bundle.js" defer></script>
+</body>
+</html>
